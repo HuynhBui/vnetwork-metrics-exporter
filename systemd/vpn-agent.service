@@ -1,0 +1,16 @@
+[Unit]
+Description=VPN Metrics Agent
+After=network.target
+
+[Service]
+ExecStart=/opt/vpn-agent
+WorkingDirectory=/opt
+Restart=always
+RestartSec=5
+User=root
+Group=root
+StandardOutput=append:/var/log/vpn/vpn-agent.log
+StandardError=append:/var/log/vpn/vpn-agent.err
+
+[Install]
+WantedBy=multi-user.target
