@@ -11,7 +11,7 @@ chmod +x /opt/vpn-agent
 
 # install service
 curl -L -o /etc/systemd/system/vpn-agent.service \
-  https://raw.githubusercontent.com/YOUR_REPO/systemd/vpn-agent.service
+  https://raw.githubusercontent.com/HuynhBui/vnetwork-metrics-exporter/main/systemd/vpn-agent.service
 
 systemctl daemon-reload
 systemctl enable vpn-agent
