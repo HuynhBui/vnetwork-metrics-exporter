@@ -1,0 +1,17 @@
+[Unit]
+Description=NAT Metrics Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/opt/nat-agent
+WorkingDirectory=/opt
+Restart=always
+RestartSec=5
+User=root
+Group=root
+StandardOutput=append:/var/log/nat-agent.log
+StandardError=append:/var/log/nat-agent.err
+
+[Install]
+WantedBy=multi-user.target
